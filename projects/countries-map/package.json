@@ -1,0 +1,27 @@
+{
+  "name": "ng-countries-map",
+  "version": "5.0.0",
+  "description": "World countries datamaps component for Angular",
+  "license": "MIT",
+  "author": "Youssef El Houti",
+  "repository": "github:tailosoft/countries-map",
+  "homepage": "https://github.com/tailosoft/countries-map",
+  "keywords": [
+    "countries",
+    "country",
+    "map",
+    "datamap",
+    "datamaps",
+    "angular",
+    "standalone"
+  ],
+  "peerDependencies": {
+    "@angular/common": ">=19.0.0",
+    "@angular/core": ">=19.0.0",
+    "country-list": "^2.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,37 @@
+<main>
+  <header>
+    <h1>{{ title() }}</h1>
+    <p>Interactive world map component for Angular - Population by country (millions)</p>
+  </header>
+
+  <section class="map-container">
+    <countries-map
+      [data]="mapData()"
+      countryLabel="Country"
+      valueLabel="Population (M)"
+      [showCaption]="true"
+      [captionBelow]="true"
+      minColor="oklch(95% 0.1 145)"
+      maxColor="oklch(35% 0.2 145)"
+      backgroundColor="#f8fafc"
+      noDataColor="#e2e8f0"
+      exceptionColor="#fef08a"
+      (chartReady)="onChartReady()"
+      (chartSelect)="onChartSelect($event)"
+    />
+  </section>
+
+  @if (selectedCountry()) {
+    <section class="selection-info">
+      <p>You selected: <strong>{{ selectedCountry() }}</strong></p>
+    </section>
+  }
+
+  <footer>
+    <p>
+      Built with
+      <a href="https://angular.dev" target="_blank" rel="noopener">Angular</a>
+      using modern CSS <code>color-mix()</code> in <code>oklch</code> color space
+    </p>
+  </footer>
+</main>
